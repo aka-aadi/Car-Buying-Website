@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Buying Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tab Navigation -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('adminLogin')">Admin Login</button>
+            <button class="tab-button" onclick="openTab('userLogin')">User Login</button>
+            <button class="tab-button" onclick="openTab('register')">Register</button>
+        </div>
+
+        <!-- Admin Login Section -->
+        <div id="adminLogin" class="tab-content active">
+            <h2>Admin Login</h2>
+            <form id="admin-login-form">
+                <label for="admin-username">Username:</label>
+                <input type="text" id="admin-username" name="username" placeholder="Enter admin username" required>
+
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" name="password" placeholder="Enter admin password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- User Login Section -->
+        <div id="userLogin" class="tab-content">
+            <h2>User Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- User Registration Section -->
+        <div id="register" class="tab-content">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="reg-username">Username:</label>
+                <input type="text" id="reg-username" name="username" placeholder="Choose a username" required>
+
+                <label for="reg-password">Password:</label>
+                <input type="password" id="reg-password" name="password" placeholder="Create a password" required>
+
+                <button type="submit">Register</button>
+            </form>
+            <p id="registerMessage"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
