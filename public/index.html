@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Buying Website</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="background"></div> <!-- Background Image -->
     <div class="container">
+        <h1 class="page-title">Car Dealer Login</h1> <!-- Page Title -->
+
         <!-- Tab Navigation -->
         <div class="tabs">
             <button class="tab-button active" onclick="openTab('adminLogin')">Admin Login</button>
@@ -23,7 +26,10 @@
                 <input type="text" id="admin-username" name="username" placeholder="Enter admin username" required>
 
                 <label for="admin-password">Password:</label>
-                <input type="password" id="admin-password" name="password" placeholder="Enter admin password" required>
+                <div class="password-container">
+                    <input type="password" id="admin-password" name="password" placeholder="Enter admin password" required>
+                    <button type="button" class="eye-icon" onclick="togglePasswordVisibility('admin-password')">👁️</button>
+                </div>
 
                 <button type="submit">Login</button>
             </form>
@@ -37,7 +43,10 @@
                 <input type="text" id="username" name="username" placeholder="Enter your username" required>
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <button type="button" class="eye-icon" onclick="togglePasswordVisibility('password')">👁️</button>
+                </div>
 
                 <button type="submit">Login</button>
             </form>
@@ -51,7 +60,10 @@
                 <input type="text" id="reg-username" name="username" placeholder="Choose a username" required>
 
                 <label for="reg-password">Password:</label>
-                <input type="password" id="reg-password" name="password" placeholder="Create a password" required>
+                <div class="password-container">
+                    <input type="password" id="reg-password" name="password" placeholder="Create a password" required>
+                    <button type="button" class="eye-icon" onclick="togglePasswordVisibility('reg-password')">👁️</button>
+                </div>
 
                 <button type="submit">Register</button>
             </form>

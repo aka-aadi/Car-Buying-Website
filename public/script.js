@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const result = await response.json();
             if (response.ok) {
                 alert(result.message);
-                window.location.href = 'admin-dashboard.html'; // Redirect to Admin Dashboard
+                window.location.href = '/admin-dashboard.html'; // Redirect to admin dashboard
             } else {
                 alert(result.message);
             }
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const result = await response.json();
             if (response.ok) {
                 alert(result.message);
-                window.location.href = 'car-buying.html'; // Redirect to Car Buying page
+                window.location.href = '/car-buying.html'; // Redirect to car buying webpage
             } else {
                 // If user does not exist, switch to the registration tab
                 openTab('register');
@@ -96,4 +96,16 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error:', error);
         }
     });
+
+    // Toggle Password Visibility
+    window.togglePasswordVisibility = function(id, button) {
+        const passwordField = document.getElementById(id);
+        if (passwordField.type === 'password') {
+            passwordField.type = 'text';
+            button.textContent = '👁️'; // Change to an open eye icon if needed
+        } else {
+            passwordField.type = 'password';
+            button.textContent = '👁️'; // Change to a closed eye icon if needed
+        }
+    }
 });
