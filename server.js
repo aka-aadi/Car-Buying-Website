@@ -90,6 +90,18 @@ app.post('/login', (req, res) => {
     }
 });
 
+// Endpoint to fetch all users (for admin dashboard)
+app.get('/get-users', (req, res) => {
+    db.all('SELECT * FROM users', [], (err, rows) => {
+        if (err) {
+            console.error('Database error:', err);
+            res.status(500).json({ message: 'Database error' });
+        } else {
+            res.json(rows);
+        }
+    });
+});
+
 // Start server
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);

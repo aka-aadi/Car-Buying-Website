@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="admin-dashboard.js" defer></script>
 </head>
 <body>
-    <h1>Admin Dashboard</h1>
-    <p>Welcome, Admin! You can manage cars, users, and other administrative tasks here.</p>
-
-    <!-- Add admin-specific functionality here -->
-    <div>
-        <h2>Manage Cars</h2>
-        <p>Add, update, or remove cars from the inventory.</p>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- User data will be inserted here -->
+            </tbody>
+        </table>
     </div>
-
-    <div>
-        <h2>Manage Users</h2>
-        <p>View, edit, or delete user accounts.</p>
-    </div>
-
-    <!-- Add more admin features -->
 </body>
 </html>

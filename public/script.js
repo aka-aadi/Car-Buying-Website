@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const result = await response.json();
             if (response.ok) {
                 alert(result.message);
-                // Redirect or update UI for admin
+                window.location.href = 'admin-dashboard.html'; // Redirect to Admin Dashboard
             } else {
                 alert(result.message);
             }
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const result = await response.json();
             if (response.ok) {
                 alert(result.message);
-                // Redirect or update UI for user
+                window.location.href = 'car-buying.html'; // Redirect to Car Buying page
             } else {
                 // If user does not exist, switch to the registration tab
                 openTab('register');
