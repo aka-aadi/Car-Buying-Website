@@ -4,13 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Buying Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="car-buying.css">
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Car Buying Page</h1>
-        <p>Here you can browse and buy cars!</p>
-        <!-- Car buying content goes here -->
+        <button id="logout-button" class="logout-button">Logout</button>
+
+        <div id="cars" class="cars-container">
+            <!-- Car items -->
+            <div class="car-item" data-name="Car Model 1" data-price="20000" data-details="This is a great car with excellent features." data-image="path-to-car-image1.jpg">
+                <img src="car1.jpg" alt="Car 1">
+                <h2>Car Model 1</h2>
+                <p>Price: $20,000</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart" data-price="20000">Add to Cart</button>
+            </div>
+            <div class="car-item" data-name="Car Model 2" data-price="25000" data-details="This car has a sleek design and modern technology." data-image="path-to-car-image2.jpg">
+                <img src="car2.jpg" alt="Car 2">
+                <h2>Car Model 2</h2>
+                <p>Price: $25,000</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart" data-price="25000">Add to Cart</button>
+            </div>
+            <div class="car-item" data-name="Car Model 3" data-price="30000" data-details="A luxurious car with top-notch features." data-image="path-to-car-image3.jpg">
+                <img src="car3.jpg" alt="Car 3">
+                <h2>Car Model 3</h2>
+                <p>Price: $30,000</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart" data-price="30000">Add to Cart</button>
+            </div>
+            <div class="car-item" data-name="Car Model 4" data-price="35000" data-details="Sporty and fast, perfect for enthusiasts." data-image="path-to-car-image4.jpg">
+                <img src="car3.jpg" alt="Car 4">
+                <h2>Car Model 4</h2>
+                <p>Price: $35,000</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart" data-price="35000">Add to Cart</button>
+            </div>
+            <div class="car-item" data-name="Car Model 5" data-price="40000" data-details="Elegant and refined, ideal for executive travel." data-image="path-to-car-image5.jpg">
+                <img src="car1.jpg" alt="Car 5">
+                <h2>Car Model 5</h2>
+                <p>Price: $40,000</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart" data-price="40000">Add to Cart</button>
+            </div>
+            <div class="car-item" data-name="Car Model 6" data-price="45000" data-details="High performance and comfort combined." data-image="path-to-car-image6.jpg">
+                <img src="car2.jpg" alt="Car 6">
+                <h2>Car Model 6</h2>
+                <p>Price: $45,000</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart" data-price="45000">Add to Cart</button>
+            </div>
+            <div class="car-item" data-name="Car Model 7" data-price="22000" data-details="A compact car with great fuel efficiency." data-image="path-to-car-image7.jpg">
+                <img src="car2.jpg" alt="Car 7">
+                <h2>Car Model 7</h2>
+                <p>Price: $22,000</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart" data-price="22000">Add to Cart</button>
+            </div>
+            <div class="car-item" data-name="Car Model 8" data-price="27000" data-details="Comfortable and practical for daily use." data-image="path-to-car-image8.jpg">
+                <img src="car1.jpg" alt="Car 8">
+                <h2>Car Model 8</h2>
+                <p>Price: $27,000</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart" data-price="27000">Add to Cart</button>
+            </div>
+            <div class="car-item" data-name="Car Model 9" data-price="32000" data-details="A stylish car with advanced technology." data-image="path-to-car-image9.jpg">
+                <img src="car3.jpg" alt="Car 9">
+                <h2>Car Model 9</h2>
+                <p>Price: $32,000</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart" data-price="32000">Add to Cart</button>
+            </div>
+            <div class="car-item" data-name="Car Model 10" data-price="37000" data-details="Perfect for long drives with superior comfort." data-image="path-to-car-image10.jpg">
+                <img src="car1.jpg" alt="Car 10">
+                <h2>Car Model 10</h2>
+                <p>Price: $37,000</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart" data-price="37000">Add to Cart</button>
+            </div>
+            <div class="car-item" data-name="Car Model 11" data-price="42000" data-details="A premium car with excellent handling." data-image="path-to-car-image11.jpg">
+                <img src="car3.jpg" alt="Car 11">
+                <h2>Car Model 11</h2>
+                <p>Price: $42,000</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart" data-price="42000">Add to Cart</button>
+            </div>
+            <div class="car-item" data-name="Car Model 12" data-price="47000" data-details="Luxury and performance combined." data-image="path-to-car-image12.jpg">
+                <img src="car2.jpg" alt="Car 12">
+                <h2>Car Model 12</h2>
+                <p>Price: $47,000</p>
+                <button class="view-details">View Details</button>
+                <button class="add-to-cart" data-price="47000">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Car Details Modal -->
+        <div id="car-details-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <img id="car-details-image" src="" alt="Car">
+                <h2 id="car-details-name"></h2>
+                <p id="car-details-price"></p>
+                <p id="car-details-description"></p>
+            </div>
+        </div>
+
+        <!-- Cart Toggle Button -->
+        <div class="cart-wrapper">
+            <button id="cart-icon" class="cart-icon">🛒</button>
+            <div id="cart-notification" class="cart-notification hidden">0</div>
+        </div>
+
+        <!-- Cart Container -->
+        <div id="cart-container" class="cart-container hidden">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0</p>
+            <button id="checkout-button" class="checkout-button">Checkout</button>
+        </div>
+
+        <!-- Pagination Buttons -->
+        <div class="pagination">
+            <button id="prev-page" class="pagination-button">Previous</button>
+            <button id="next-page" class="pagination-button">Next</button>
+        </div>
     </div>
+    <script src="car-buying.js"></script>
 </body>
 </html>
